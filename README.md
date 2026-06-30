@@ -2,7 +2,9 @@
 
 Autonomous exploration and occupancy-grid mapping for a Pioneer 3-DX robot in Webots. The robot builds a probabilistic map from ultrasonic sensors, selects frontier targets, navigates around obstacles, and recovers from loops or physical stalls without predefined waypoints.
 
-![Pioneer 3-DX exploring the complex arena](assets/images/complex_environment.jpg)
+![Autonomous exploration and occupancy-grid mapping timelapse](assets/images/exploration_timelapse.gif)
+
+The timelapse condenses a five-minute autonomous run: the live occupancy grid is shown on the left and the Pioneer 3-DX simulation on the right.
 
 ## Highlights
 
@@ -15,9 +17,17 @@ Autonomous exploration and occupancy-grid mapping for a Pioneer 3-DX robot in We
 
 ## Demo
 
-[Watch the complex-arena run](assets/demo/autonomous_exploration.mp4)
+[Watch the full-resolution complex-arena run](assets/demo/autonomous_exploration.mp4)
 
 The recorded run reaches approximately 97.6% observed map coverage. A detailed design discussion is available in the [technical report](docs/technical_report.pdf), with a readable [Markdown version](docs/TECHNICAL_REPORT.md).
+
+## Mapping progression
+
+| Initial 360° scan | Frontier exploration |
+|:---:|:---:|
+| ![Initial scan](assets/images/01_initial_scan.jpg) | ![Frontier exploration](assets/images/02_frontier_exploration.jpg) |
+| **Navigating the spiral** | **Completed occupancy grid** |
+| ![Spiral mapping](assets/images/03_spiral_mapping.jpg) | ![Final occupancy grid at 97.6 percent coverage](assets/images/04_final_coverage.jpg) |
 
 ## Requirements
 
