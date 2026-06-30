@@ -1,0 +1,8 @@
+.DS_Store
+__MACOSX/
+__pycache__/
+*.py[cod]
+*.wbproj
+.venv/
+venv/
+tmp/

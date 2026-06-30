@@ -1,0 +1,88 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  fieldOfView 1
+  orientation -0.5773502691896258 0.5773502691896258 0.5773502691896258 2.0944
+  position 0.0009988580625175298 1.2973933294332494e-05 9.21099361335259
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DEF ARENA RectangleArena {
+  floorSize 6 6
+  wallHeight 0.4
+}
+Pioneer3dx {
+  translation -2 -2 0.0975
+  controller "autonomous_explorer"
+  supervisor TRUE
+  extensionSlot [
+    TouchSensor {
+      translation 0.175 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry DEF BUMPER Box {
+            size 0.01 0.28 0.05
+          }
+        }
+      ]
+      boundingObject USE BUMPER
+    }
+    Display {
+      width 300
+      height 300
+    }
+  ]
+}
+Wall {
+  translation -1.75 -0.8 0
+  name "NW Diag (2)"
+  size 0.4 1.6 0.4
+}
+Wall {
+  translation 0.2 -0.8 0
+  name "NW Diag (1)"
+  size 0.4 1.6 0.4
+}
+Wall {
+  translation -1.5 1.75 0
+  name "Spiral (2)"
+  size 1 0.4 0.4
+}
+Wall {
+  translation 1 1.75 0
+  name "Spiral (1)"
+  size 1 0.4 0.4
+}
+Wall {
+  translation -0.6 -1.4 0
+  name "Spiral (4)"
+  size 2 0.4 0.4
+}
+Wall {
+  translation -0.8 1.35 0
+  name "Spiral (3)"
+  size 0.4 1.2 0.4
+}
+Wall {
+  translation 1.7 0.85 0
+  name "Spiral (5)"
+  size 0.4 2.2 0.4
+}
+Wall {
+  translation 2.4 -2.4 0
+  rotation 0 0 1 0.785
+  name "Diagonal"
+  size 1.5 0.05 0.4
+}

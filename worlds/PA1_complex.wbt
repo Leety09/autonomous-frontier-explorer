@@ -1,0 +1,128 @@
+#VRML_SIM R2025a utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/RectangleArena.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/adept/pioneer3/protos/Pioneer3dx.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  fieldOfView 1
+  orientation -0.5753389526385423 0.586962336627656 0.5696141720124135 2.0887518101883122
+  position -0.03999992539893249 0.12783863801246342 17.26831667958186
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+DEF ARENA RectangleArena {
+  floorSize 10 10
+  wallHeight 0.4
+}
+Wall {
+  translation -1 -1.1 0
+  name "NW Diag (7)"
+  size 2.2 0.4 0.4
+}
+Pioneer3dx {
+  translation -4 -4 0.0975
+  controller "autonomous_explorer"
+  supervisor TRUE
+  extensionSlot [
+    TouchSensor {
+      translation 0.175 0 0.05
+      children [
+        Shape {
+          appearance PBRAppearance {
+          }
+          geometry DEF BUMPER Box {
+            size 0.01 0.28 0.05
+          }
+        }
+      ]
+      boundingObject USE BUMPER
+    }
+    Display {
+      width 400
+      height 400
+    }
+  ]
+}
+Wall {
+  translation -2.25 3.7 0
+  name "NW Diag (1)"
+  size 3 0.4 0.4
+}
+Wall {
+  translation 1.25 3.7 0
+  name "NW Diag (5)"
+  size 1.5 0.4 0.4
+}
+Wall {
+  translation 3 -1.7 0
+  name "NW Diag (11)"
+  size 1.5 0.4 0.4
+}
+Wall {
+  translation 3.2 1.4 0
+  name "NW Diag (2)"
+  size 0.4 2.4 0.4
+}
+Wall {
+  translation 1.8 2.5 0
+  name "NW Diag (4)"
+  size 0.4 2 0.4
+}
+Wall {
+  translation 2.1 -2.5 0
+  name "NW Diag (10)"
+  size 0.4 2 0.4
+}
+Wall {
+  translation -0.1 0.3 0
+  name "NW Diag (8)"
+  size 0.4 3 0.4
+}
+Wall {
+  translation 0.65 -4.5 0
+  name "NW Diag (6)"
+  size 0.4 1 0.4
+}
+Wall {
+  translation -1.9 -4.5 0
+  name "NW Diag (12)"
+  size 0.4 1 0.4
+}
+Wall {
+  translation -1.75 1.6 0
+  name "NW Diag (3)"
+  size 3 0.4 0.4
+}
+Wall {
+  translation -1.75 -2.6 0
+  name "NW Diag (9)"
+  size 3 0.4 0.4
+}
+Wall {
+  translation 4 0 0
+  name "Spiral (1)"
+  size 2 0.4 0.4
+}
+Wall {
+  translation -1.9 -0.4 0
+  name "Spiral (2)"
+  size 0.4 1 0.4
+}
+Wall {
+  translation -3.4 -0.5 0
+  name "Spiral (3)"
+  size 0.4 4.6 0.4
+}
+Wall {
+  translation 4.2 4.2 0
+  rotation 0 0 1 0.785
+  name "Diagonal"
+  size 0.1 2 0.4
+}
